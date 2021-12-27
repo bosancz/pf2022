@@ -18,15 +18,11 @@
         transform-box: fill-box;
         transform-origin: 50% 50%;
     }
-    #hvezdy > path {
+    #hvezdy > path.rotate {
         animation: rotate 5s linear infinite;
     }
-    #hvezdy > path.odd {
+    #hvezdy > path.rotate.odd {
         animation: rotate 5s linear infinite reverse;
-    }
-
-    #hvezdy > path.stopped {
-        animation: none !important;
     }
 
     @keyframes rotate {
@@ -79,7 +75,7 @@
         });
 
         $("#hvezdy path").click(function () {
-            $(this).toggleClass("odd");
+            $(this).toggleClass("rotate");
         });
     });
 </script>
